@@ -1,0 +1,11 @@
+{% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+<div id="msgSession" ></div>
+<form class="form" method="post" id="sessionUpload" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <button class="btn btn-primary" id="frmSubmit" type="submit">Upload</button>
+        <a class="btn btn-danger" href="{% url 'main:index' %}">Close</a>
+    </div>
+
+</form>

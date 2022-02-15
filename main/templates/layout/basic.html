@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>{% block title %}Dezirteer{% endblock %}</title>
+
+    <!-- bootstrap v4 -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/bootstrap4/css/bootstrap.min.css' %}"/>
+
+    <!-- datatables -->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/DataTables/datatables.min.css' %}"/>
+
+    <!-- select2  -->
+    <link href="{% static 'main/css/select2.css' %}" rel="stylesheet"/>
+    <link href="{% static 'main/css/select2-bootstrap4.css' %}" rel="stylesheet"/>
+
+    <link href="{% static 'main/css/styles.css' %}" rel="stylesheet"/>
+
+
+    {% block head %}{% endblock %}
+    {% block js %}{% endblock %}
+
+</head>
+<body class="sb-nav-fixed">
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Dezirteer</a>
+    <span class="navbar-text" id="uploaded_file">{{ uploaded_file }}</span>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Session
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <a class="dropdown-item" href="{% url 'main:save-session' %}">Save session</a>
+                    <a id="ajax_load_session" class="dropdown-item" href="#">Load session</a>
+                    <a class="dropdown-item" href="{% url 'main:new-session' %}">New session</a>
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- Page content-->
+<div class="container-fluid px-0">
+
+    <!-- Modal file-->
+    <div class="modal fade" id="empModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal session-->
+    <div class="modal fade" id="empModalSession" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+<div class="mt-4 bg-dark">
+    <footer class="py-4 bg-dark mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted mx-auto">Copyright &copy; Dezirteer 2022</div>
+{#                <div>#}
+{#                    <a href="#">Privacy Policy</a>#}
+{#                    <a href="#">Terms &amp; Conditions</a>#}
+{#                </div>#}
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- jquery and bootstrap v4  -->
+<script type="text/javascript" src="{% static 'main/js/jquery-3.6.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'main/bootstrap4/js/bootstrap.min.js' %}"></script>
+
+<!-- datatables  -->
+<script type="text/javascript" src="{% static 'main/DataTables/datatables.min.js' %}"></script>
+
+<!-- select2  -->
+<script src="{% static 'main/js/select2.js' %}"></script>
+
+<!--  bootbox code -->
+<script src="{% static 'main/bootbox/bootbox.min.js' %}"></script>
+<script src="{% static 'main/bootbox/bootbox.locales.min.js' %}"></script>
+
+<!-- bokeh -->
+<script src="{% static 'main/bokeh/bokeh-2.4.2.min.js' %}"></script>
+
+<!-- app logic -->
+<script src="{% static 'main/js/scripts.js' %}"></script>
+
+</body>
+</html>

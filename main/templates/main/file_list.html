@@ -1,0 +1,28 @@
+{% extends 'layout/basic.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5>Uploaded files</h5>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+
+                {% for doc in doc_list %}
+                    <a href="{% url 'main:select-sample' id_sample=doc.pk %}"
+                       class="list-group-item list-group-item-action">{{ doc.description }} (Uploaded
+                        at: {{ doc.uploaded_at }})</a>
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-danger" href="{% url 'main:index' %}">Cancel</a>
+        </div>
+    </div>
+
+
+{% endblock %}
+

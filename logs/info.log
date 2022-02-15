@@ -1,0 +1,23 @@
+INFO 2022-02-15 13:48:17,253 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-02-15 13:53:44,639 autoreload 637 Watching for file changes with StatReloader
+INFO 2022-02-15 13:54:09,148 basehttp 161 "GET / HTTP/1.1" 200 51865
+INFO 2022-02-15 13:54:09,399 basehttp 161 "GET /static/main/bootstrap4/css/bootstrap.min.css HTTP/1.1" 200 162017
+INFO 2022-02-15 13:54:09,406 basehttp 161 "GET /static/main/DataTables/datatables.min.css HTTP/1.1" 200 23002
+INFO 2022-02-15 13:54:09,406 basehttp 161 "GET /static/main/css/select2-bootstrap4.css HTTP/1.1" 200 7697
+INFO 2022-02-15 13:54:09,407 basehttp 161 "GET /static/main/css/select2.css HTTP/1.1" 200 18930
+INFO 2022-02-15 13:54:09,415 basehttp 161 "GET /static/main/js/jquery-3.6.0.min.js HTTP/1.1" 200 89501
+INFO 2022-02-15 13:54:09,416 basehttp 161 "GET /static/main/bootstrap4/js/bootstrap.min.js HTTP/1.1" 200 62440
+INFO 2022-02-15 13:54:09,424 basehttp 161 "GET /static/main/css/styles.css HTTP/1.1" 200 222123
+INFO 2022-02-15 13:54:09,451 basehttp 161 "GET /static/main/bootbox/bootbox.min.js HTTP/1.1" 200 15778
+INFO 2022-02-15 13:54:09,452 basehttp 161 "GET /static/main/bootbox/bootbox.locales.min.js HTTP/1.1" 200 3202
+INFO 2022-02-15 13:54:09,453 basehttp 161 "GET /static/main/js/scripts.js HTTP/1.1" 200 47879
+INFO 2022-02-15 13:54:09,457 basehttp 161 "GET /static/main/js/select2.js HTTP/1.1" 200 156954
+INFO 2022-02-15 13:54:09,460 basehttp 161 "GET /static/main/DataTables/datatables.min.js HTTP/1.1" 200 195458
+INFO 2022-02-15 13:54:09,473 basehttp 161 "GET /static/main/bokeh/bokeh-2.4.2.min.js HTTP/1.1" 200 799372
+WARNING 2022-02-15 13:54:11,170 log 230 Not Found: /favicon.ico
+WARNING 2022-02-15 13:54:11,171 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 3988
+INFO 2022-02-15 13:54:22,061 basehttp 161 "GET /uploads/form/ HTTP/1.1" 200 605
+INFO 2022-02-15 13:54:52,528 basehttp 161 "POST /uploads/form/ HTTP/1.1" 200 779608
+INFO 2022-02-15 13:54:52,785 basehttp 161 "POST / HTTP/1.1" 200 779292
+INFO 2022-02-15 13:54:55,908 basehttp 161 "POST / HTTP/1.1" 200 779292
+INFO 2022-02-15 13:55:11,422 basehttp 161 "POST /bokeh/ HTTP/1.1" 200 969625
